@@ -1,20 +1,20 @@
 <div class="container">
-  <div class="panel panel-default">
+  <div class="panel panel-default" ng-repeat="product in store.products">
     <div class="panel-heading">
       <h3 class="panel-title">
-        Product Name
+        {{product.name}}
       </h3>
     </div>
     <div class="panel-body">
       <div class="row">
       <div class="col-md-6">
-        Product Description
+        {{product.description}}
       </div>
       <div class="col-md-4">
-        Product Price
+        ${{product.price}}.00
       </div>
       <div class="col-md-2">
-      <button class="btn btn-default" type="submit">Add To Cart</button>
+      <button class="btn btn-default" ng-click="store.buy(product)">Add To Cart</button>
       </div>
       </div>
     </div>
